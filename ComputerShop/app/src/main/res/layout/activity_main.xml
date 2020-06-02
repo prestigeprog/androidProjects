@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Your name"
+        android:inputType="textPersonName" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewCpu"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/cpu_0" />
+
+        <TextView
+            android:id="@+id/textViewSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bangers"
+            android:rotation="-20"
+            android:text="Sale -10%"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="Select item:"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/goodsImageView"
+        android:layout_width="155dp"
+        android:layout_height="187dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/ryzen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:onClick="addToCart"
+            android:id="@+id/buttonCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:text="ADD TO CART"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/priceRubles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewPrice"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="61990"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewPrice"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/priceRubles"
+            android:text="₽"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Order price:                                             Quantity:"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textViewPrice"
+            android:layout_alignLeft="@id/buttonPlus"
+            android:layout_alignParentRight="false"
+            android:layout_marginLeft="-44dp"
+            android:layout_marginTop="15dp"
+            android:inputType="textPersonName"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:onClick="increaseQuantity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textViewPrice"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="+"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:onClick="decreaseQuantity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textViewPrice"
+            android:layout_alignRight="@id/quantityText"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="45dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="-"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</LinearLayout>
